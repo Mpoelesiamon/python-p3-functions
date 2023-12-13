@@ -22,7 +22,7 @@ class TestGreet:
     '''function greet()'''
 
     def test_greet_programmer(self):
-        '''prints "Hello, {name}!"'''
+        '''prints "Hello, {Guido}!"'''
         captured_out = io.StringIO()
         sys.stdout = captured_out
         greet("Guido")
@@ -41,7 +41,7 @@ class TestGreetWithDefault:
         assert(captured_out.getvalue() == "Hello, programmer!\n")
 
     def test_greet_with_default_with_param(self):
-        '''prints "Hello, {name}!"'''
+        '''prints "Hello, {}!"'''
         captured_out = io.StringIO()
         sys.stdout = captured_out
         greet_with_default("Guido")
